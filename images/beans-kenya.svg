@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t">
+<title id="t">Пачка кофе Кения АА</title>
+<rect width="400" height="300" fill="#e6d8e8"/>
+<circle cx="330" cy="60" r="70" fill="#ffffff" opacity=".35"/>
+<ellipse cx="200" cy="262" rx="120" ry="12" fill="#2a1c14" opacity=".12"/>
+<path d="M140 70 L260 70 L272 255 Q200 266 128 255 Z" fill="#6b3d73" stroke="#2a1c14" stroke-width="4" stroke-linejoin="round"/>
+<path d="M140 70 L260 70 L256 92 L144 92 Z" fill="#2a1c14" opacity=".25"/>
+<path d="M150 58 h100 v14 h-100 z" fill="#6b3d73" stroke="#2a1c14" stroke-width="4" stroke-linejoin="round"/>
+<rect x="152" y="130" width="96" height="76" rx="8" fill="#fbf7f1" stroke="#2a1c14" stroke-width="3"/>
+<ellipse cx="200" cy="158" rx="14" ry="20" fill="#2a1c14" transform="rotate(25 200 158)"/>
+<path d="M194 142 q12 16 0 32" stroke="#fbf7f1" stroke-width="3" fill="none" transform="rotate(25 200 158)"/>
+<rect x="166" y="186" width="68" height="6" rx="3" fill="#2a1c14"/>
+<rect x="178" y="196" width="44" height="4" rx="2" fill="#2a1c14" opacity=".5"/>
+<ellipse cx="300" cy="238" rx="12" ry="17" fill="#5b3a26" transform="rotate(-30 300 238)"/>
+<ellipse cx="96" cy="244" rx="11" ry="15" fill="#5b3a26" transform="rotate(40 96 244)"/>
+</svg>

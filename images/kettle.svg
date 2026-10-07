@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t">
+<title id="t">Чайник с гусиным носиком</title>
+<rect width="400" height="300" fill="#d9e2e4"/>
+<circle cx="330" cy="60" r="70" fill="#ffffff" opacity=".35"/>
+<ellipse cx="200" cy="262" rx="120" ry="12" fill="#2a1c14" opacity=".12"/>
+
+<path d="M130 120 Q130 100 150 100 L250 100 Q270 100 270 120 L276 248 L124 248 Z" fill="#3a3f44" stroke="#2a1c14" stroke-width="4" stroke-linejoin="round"/>
+<path d="M130 236 h140" stroke="#ffffff" stroke-width="3" opacity=".3"/>
+<path d="M126 200 Q90 196 80 150 Q74 120 52 104" fill="none" stroke="#2a1c14" stroke-width="12" stroke-linecap="round"/>
+<path d="M126 200 Q90 196 80 150 Q74 120 52 104" fill="none" stroke="#3a3f44" stroke-width="6" stroke-linecap="round"/>
+<path d="M270 130 Q320 130 320 175 Q320 220 272 224" fill="none" stroke="#a4431c" stroke-width="12" stroke-linecap="round"/>
+<rect x="176" y="86" width="48" height="16" rx="6" fill="#a4431c" stroke="#2a1c14" stroke-width="3"/>
+<rect x="194" y="72" width="12" height="16" rx="4" fill="#2a1c14"/>
+</svg>
