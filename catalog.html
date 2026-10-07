@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
-  <title>Каталог товаров — Учебный интернет-магазин</title>
+  <meta name="description" content="Каталог книг городской библиотеки: классика и современная проза.">
+  <title>Каталог книг — Городская библиотека</title>
   <link rel="stylesheet" href="css/style.css">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Каталог товаров — Учебный интернет-магазин">
-  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:title" content="Каталог книг — Городская библиотека">
+  <meta property="og:description" content="Учебный frontend-проект сайта библиотеки.">
 </head>
 <body id="top">
   <header>
     <div class="site-header">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">Библиотека</a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Книга</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
         </ul>
@@ -34,10 +34,10 @@
     </nav>
 
     <section class="section">
-      <h1>Каталог товаров</h1>
+      <h1>Каталог книг</h1>
       <p>
-        На этой странице представлен учебный каталог товаров.
-        Выберите товар и перейдите к подробной карточке.
+        В каталоге представлены книги нашего фонда.
+        Выберите книгу и перейдите к подробной карточке.
       </p>
     </section>
 
@@ -47,11 +47,11 @@
 
         <form class="filters-form" action="#" method="get">
           <fieldset>
-            <legend>Категория</legend>
+            <legend>Раздел</legend>
 
             <label>
               <input type="checkbox" name="category" value="all">
-              Все товары
+              Все книги
             </label>
 
             <label>
@@ -61,18 +61,18 @@
 
             <label>
               <input type="checkbox" name="category" value="new">
-              Новинки
+              Новые поступления
             </label>
           </fieldset>
 
           <fieldset>
-            <legend>Цена</legend>
+            <legend>Год издания</legend>
 
-            <label for="price-from">От</label>
-            <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
+            <label for="year-from">От</label>
+            <input id="year-from" name="year-from" type="number" min="1800" max="2026" placeholder="1800">
 
-            <label for="price-to">До</label>
-            <input id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+            <label for="year-to">До</label>
+            <input id="year-to" name="year-to" type="number" min="1800" max="2026" placeholder="2026">
           </fieldset>
 
           <button class="button" type="submit">Применить</button>
@@ -80,57 +80,57 @@
       </aside>
 
       <section class="catalog-products">
-        <h2>Список товаров</h2>
+        <h2>Список книг</h2>
 
         <div class="products-grid">
-          <article class="product-card">
-            <span class="product-card__badge">Хит</span>
-            <h3 class="product-card__title">Товар 1</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">1000 руб.</p>
-            <a class="button product-card__button" href="product.html">Подробнее</a>
-          </article>
+        <article class="product-card">
+          <span class="product-card__badge">Хит</span>
+          <h3 class="product-card__title">Война и мир</h3>
+          <p class="product-card__description">Автор: Л. Н. Толстой.</p>
+          <p class="product-card__price">Выдача на 14 дней</p>
+          <a class="button product-card__button" href="product.html">Подробнее</a>
+        </article>
 
-          <article class="product-card product-card--discount">
-            <span class="product-card__badge">Скидка</span>
-            <h3 class="product-card__title">Товар 2</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">1500 руб.</p>
-            <a class="button product-card__button" href="product.html">Подробнее</a>
-          </article>
+        <article class="product-card product-card--rare">
+          <span class="product-card__badge">Редкое</span>
+          <h3 class="product-card__title">Мастер и Маргарита</h3>
+          <p class="product-card__description">Автор: М. А. Булгаков.</p>
+          <p class="product-card__price">Выдача на 14 дней</p>
+          <a class="button product-card__button" href="product.html">Подробнее</a>
+        </article>
 
-          <article class="product-card">
-            <span class="product-card__badge">Новинка</span>
-            <h3 class="product-card__title">Товар 3</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">2000 руб.</p>
-            <a class="button product-card__button" href="product.html">Подробнее</a>
-          </article>
+        <article class="product-card">
+          <span class="product-card__badge">Новое</span>
+          <h3 class="product-card__title">Мёртвые души</h3>
+          <p class="product-card__description">Автор: Н. В. Гоголь.</p>
+          <p class="product-card__price">Выдача на 14 дней</p>
+          <a class="button product-card__button" href="product.html">Подробнее</a>
+        </article>
 
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 4</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">2500 руб.</p>
-            <a class="button product-card__button" href="product.html">Подробнее</a>
-          </article>
+        <article class="product-card">
+          <h3 class="product-card__title">Преступление и наказание</h3>
+          <p class="product-card__description">Автор: Ф. М. Достоевский.</p>
+          <p class="product-card__price">Выдача на 14 дней</p>
+          <a class="button product-card__button" href="product.html">Подробнее</a>
+        </article>
 
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 5</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">3000 руб.</p>
-            <a class="button product-card__button" href="product.html">Подробнее</a>
-          </article>
+        <article class="product-card">
+          <h3 class="product-card__title">Евгений Онегин</h3>
+          <p class="product-card__description">Автор: А. С. Пушкин.</p>
+          <p class="product-card__price">Выдача на 14 дней</p>
+          <a class="button product-card__button" href="product.html">Подробнее</a>
+        </article>
 
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 6</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">3500 руб.</p>
-            <a class="button product-card__button" href="product.html">Подробнее</a>
-          </article>
+        <article class="product-card">
+          <h3 class="product-card__title">Тихий Дон</h3>
+          <p class="product-card__description">Автор: М. А. Шолохов.</p>
+          <p class="product-card__price">Выдача на 14 дней</p>
+          <a class="button product-card__button" href="product.html">Подробнее</a>
+        </article>
         </div>
 
         <p>
-          Не нашли нужный товар? <a href="order.html">Оставьте заявку</a>
+          Не нашли нужную книгу? <a href="order.html">Оставьте заявку</a>
           или <a href="contacts.html">свяжитесь с нами</a>.
         </p>
       </section>
@@ -140,7 +140,7 @@
   <footer>
     <nav class="footer-nav" aria-label="Быстрые ссылки">
       <a href="index.html#advantages">Преимущества</a>
-      <a href="index.html#popular">Популярные товары</a>
+      <a href="index.html#popular">Популярные книги</a>
       <a href="contacts.html#feedback">Обратная связь</a>
     </nav>
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>

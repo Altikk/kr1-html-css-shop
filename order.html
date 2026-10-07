@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Форма оформления заявки в учебном интернет-магазине.">
-  <title>Оформление заявки — Учебный интернет-магазин</title>
+  <meta name="description" content="Форма бронирования книги в городской библиотеке.">
+  <title>Заявка на бронирование — Городская библиотека</title>
   <link rel="stylesheet" href="css/style.css">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Оформление заявки — Учебный интернет-магазин">
-  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:title" content="Заявка на бронирование — Городская библиотека">
+  <meta property="og:description" content="Учебный frontend-проект сайта библиотеки.">
 </head>
 <body id="top">
   <header>
     <div class="site-header">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">Библиотека</a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Книга</a></li>
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
         </ul>
@@ -30,12 +30,12 @@
   <main>
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a href="index.html">Главная</a>
-      <span>Оформление заявки</span>
+      <span>Заявка на бронирование</span>
     </nav>
 
     <section class="section">
-      <h1>Оформление заявки</h1>
-      <p>Заполните форму, и мы свяжемся с вами для подтверждения заказа.</p>
+      <h1>Заявка на бронирование</h1>
+      <p>Заполните форму, и мы подготовим книгу к вашему приходу.</p>
 
       <form class="order-form order-form--page" action="#" method="post">
         <div class="form-field">
@@ -62,21 +62,21 @@
         </div>
 
         <div class="form-field">
-          <label for="product">Товар</label>
+          <label for="product">Книга</label>
           <select id="product" name="product" required>
-            <option value="">Выберите товар</option>
-            <option value="product-1">Товар 1</option>
-            <option value="product-2">Товар 2</option>
-            <option value="product-3">Товар 3</option>
-            <option value="product-4">Товар 4</option>
-            <option value="product-5">Товар 5</option>
-            <option value="product-6">Товар 6</option>
+            <option value="">Выберите книгу</option>
+            <option value="product-1">Война и мир</option>
+            <option value="product-2">Мастер и Маргарита</option>
+            <option value="product-3">Мёртвые души</option>
+            <option value="product-4">Преступление и наказание</option>
+            <option value="product-5">Евгений Онегин</option>
+            <option value="product-6">Тихий Дон</option>
           </select>
         </div>
 
         <div class="form-field">
           <label for="comment">Комментарий</label>
-          <textarea id="comment" name="comment" rows="4" placeholder="Укажите дополнительную информацию"></textarea>
+          <textarea id="comment" name="comment" rows="4" placeholder="Например, удобное время визита"></textarea>
         </div>
 
         <div class="form-field form-field--checkbox">
@@ -87,7 +87,7 @@
         </div>
 
         <div class="form-actions">
-          <button type="submit">Отправить заявку</button>
+          <button type="submit">Забронировать</button>
           <button type="reset">Очистить</button>
         </div>
       </form>
@@ -97,7 +97,7 @@
   <footer>
     <nav class="footer-nav" aria-label="Быстрые ссылки">
       <a href="index.html#advantages">Преимущества</a>
-      <a href="index.html#popular">Популярные товары</a>
+      <a href="index.html#popular">Популярные книги</a>
       <a href="contacts.html#feedback">Обратная связь</a>
     </nav>
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>

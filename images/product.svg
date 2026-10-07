@@ -1,6 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
-  <rect width="400" height="300" fill="#eef5ff"/>
-  <rect x="130" y="80" width="140" height="140" rx="12" fill="#0057b8"/>
-  <rect x="130" y="80" width="140" height="30" rx="12" fill="#003f86"/>
-  <text x="200" y="175" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle">Товар 1</text>
+  <rect width="400" height="300" fill="#efe0cd"/>
+  <rect x="120" y="50" width="160" height="210" rx="6" fill="#54301b"/>
+  <rect x="132" y="50" width="148" height="210" rx="6" fill="#7b4a2d"/>
+  <rect x="152" y="86" width="108" height="3" fill="#efe0cd"/>
+  <text x="206" y="140" font-family="Georgia, serif" font-size="22" fill="#fffaf4" text-anchor="middle">Война</text>
+  <text x="206" y="168" font-family="Georgia, serif" font-size="22" fill="#fffaf4" text-anchor="middle">и мир</text>
+  <rect x="152" y="196" width="108" height="3" fill="#efe0cd"/>
+  <rect x="120" y="50" width="12" height="210" fill="#2b1d14"/>
 </svg>

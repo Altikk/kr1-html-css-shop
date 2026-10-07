@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Карточка товара: описание, характеристики и цена.">
-  <title>Товар 1 — Учебный интернет-магазин</title>
+  <meta name="description" content="Карточка книги: описание, характеристики и условия выдачи.">
+  <title>Война и мир — Городская библиотека</title>
   <link rel="stylesheet" href="css/style.css">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Товар 1 — Учебный интернет-магазин">
-  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:title" content="Война и мир — Городская библиотека">
+  <meta property="og:description" content="Учебный frontend-проект сайта библиотеки.">
 </head>
 <body id="top">
   <header>
     <div class="site-header">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">Библиотека</a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="product.html">Книга</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
         </ul>
@@ -31,20 +31,20 @@
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a href="index.html">Главная</a>
       <a href="catalog.html">Каталог</a>
-      <span>Товар 1</span>
+      <span>Война и мир</span>
     </nav>
 
     <article class="product">
-      <img class="product__image" src="images/product.svg" alt="Изображение товара 1" width="400" height="300">
+      <img class="product__image" src="images/product.svg" alt="Обложка книги «Война и мир»" width="400" height="300">
 
       <div class="product__info">
-        <h1 class="product__title">Товар 1</h1>
+        <h1 class="product__title">Война и мир</h1>
         <p class="product__description">
-          Подробное описание учебного товара. Здесь можно рассказать,
-          для чего нужен товар, из чего он сделан и чем он лучше аналогов.
+          Роман-эпопея Л. Н. Толстого о жизни русского общества в эпоху
+          наполеоновских войн. Одно из главных произведений мировой литературы.
         </p>
-        <p class="product__price">1000 руб.</p>
-        <a class="button" href="order.html">Оформить заявку</a>
+        <p class="product__price">Выдача на 14 дней</p>
+        <a class="button" href="order.html">Забронировать</a>
         <p><a href="#specs">Перейти к характеристикам</a></p>
       </div>
     </article>
@@ -53,7 +53,7 @@
       <h2>Характеристики</h2>
 
       <table class="specs-table">
-        <caption>Характеристики товара 1</caption>
+        <caption>Характеристики книги «Война и мир»</caption>
         <thead>
           <tr>
             <th scope="col">Параметр</th>
@@ -62,39 +62,43 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">Категория</th>
-            <td>Популярные товары</td>
+            <th scope="row">Автор</th>
+            <td>Л. Н. Толстой</td>
           </tr>
           <tr>
-            <th scope="row">Материал</th>
-            <td>Пластик</td>
+            <th scope="row">Жанр</th>
+            <td>Роман-эпопея, классика</td>
           </tr>
           <tr>
-            <th scope="row">Размер</th>
-            <td>20 × 15 × 10 см</td>
+            <th scope="row">Год издания</th>
+            <td>1869</td>
           </tr>
           <tr>
-            <th scope="row">Вес</th>
-            <td>500 г</td>
+            <th scope="row">Количество страниц</th>
+            <td>1300</td>
           </tr>
           <tr>
-            <th scope="row">Гарантия</th>
-            <td>12 месяцев</td>
+            <th scope="row">Язык</th>
+            <td>Русский</td>
+          </tr>
+          <tr>
+            <th scope="row">Наличие</th>
+            <td>Есть на абонементе (3 экземпляра)</td>
           </tr>
         </tbody>
       </table>
     </section>
 
     <aside class="aside-info">
-      <h2>Доставка</h2>
-      <p>Доставка по Москве — 1–2 дня. Подробности можно уточнить на странице <a href="contacts.html">контактов</a>.</p>
+      <h2>Как получить книгу</h2>
+      <p>Забронированная книга ждёт вас на абонементе три дня. Часы работы — на странице <a href="contacts.html">контактов</a>.</p>
     </aside>
   </main>
 
   <footer>
     <nav class="footer-nav" aria-label="Быстрые ссылки">
       <a href="index.html#advantages">Преимущества</a>
-      <a href="index.html#popular">Популярные товары</a>
+      <a href="index.html#popular">Популярные книги</a>
       <a href="contacts.html#feedback">Обратная связь</a>
     </nav>
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
