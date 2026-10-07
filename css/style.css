@@ -125,7 +125,7 @@ button:hover,
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
   padding: var(--space-xl) var(--space-lg);
-  background-color: var(--color-surface-accent);
+  background-image: url('images/books.jpeg');
   border-radius: var(--radius-lg);
 }
 
