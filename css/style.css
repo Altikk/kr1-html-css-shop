@@ -3,15 +3,15 @@
    =============================== */
 
 :root {
-  /* Основные цвета проекта */
-  --color-bg: #ffffff;
-  --color-text: #222222;
-  --color-muted: #666666;
-  --color-primary: #0057b8;
-  --color-primary-dark: #003f86;
-  --color-border: #dddddd;
-  --color-surface: #f7f7f7;
-  --color-surface-accent: #eef5ff;
+  /* Основные цвета проекта: коричневая палитра */
+  --color-bg: #fffaf4;
+  --color-text: #2b1d14;
+  --color-muted: #6e5a4b;
+  --color-primary: #7b4a2d;
+  --color-primary-dark: #54301b;
+  --color-border: #e3d3c2;
+  --color-surface: #f6ede2;
+  --color-surface-accent: #efe0cd;
   --color-danger: #b00020;
   --color-success: #168a2f;
   --color-success-bg: #eefaf0;
@@ -182,7 +182,7 @@ button:hover,
 }
 
 .order-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(43, 29, 20, 0.6);
 }
 
 .form-field {
@@ -423,6 +423,8 @@ header {
 
 .product-card__title {
   margin: 0;
+  /* Справа место под бейдж, чтобы он не налезал на длинное название */
+  padding-right: 64px;
 }
 
 .product-card__description {
@@ -436,13 +438,9 @@ header {
   font-weight: 700;
 }
 
-/* Модификатор: товар со скидкой */
-.product-card--discount .product-card__price {
-  color: var(--color-danger);
-}
-
-.product-card--discount .product-card__badge {
-  background-color: var(--color-danger);
+/* Модификатор: редкое издание — тёмный бейдж */
+.product-card--rare .product-card__badge {
+  background-color: var(--color-primary-dark);
 }
 
 /* Блок фильтров прилипает при прокрутке каталога */

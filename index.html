@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Главная страница учебного интернет-магазина: преимущества и популярные товары.">
-  <title>Учебный интернет-магазин</title>
+  <meta name="description" content="Городская библиотека: каталог книг, бронирование и условия выдачи.">
+  <title>Городская библиотека</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Учебный интернет-магазин">
-  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:title" content="Городская библиотека">
+  <meta property="og:description" content="Учебный frontend-проект сайта библиотеки.">
 </head>
 <body id="top">
   <header>
     <div class="site-header">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">Библиотека</a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Книга</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
         </ul>
@@ -30,75 +30,76 @@
 
   <main>
     <section class="hero">
-      <h1>Учебный интернет-магазин</h1>
+      <h1>Городская библиотека</h1>
       <p>
-        Это главная страница учебного frontend-проекта.
-        Здесь собраны преимущества магазина и популярные товары.
+        Более 50 000 книг: классика, современная проза, научная литература.
+        Выбирайте книгу в каталоге и бронируйте онлайн — мы подготовим её к вашему приходу.
       </p>
-      <a class="button" href="#popular">Перейти к товарам</a>
+      <a class="button" href="#popular">Перейти к книгам</a>
     </section>
 
     <section class="section" id="advantages">
-      <h2>Преимущества проекта</h2>
+      <h2>Преимущества библиотеки</h2>
 
       <ul class="advantages-list">
-        <li>понятная HTML-структура;</li>
-        <li>семантические блоки страницы;</li>
-        <li>подключение внешнего CSS-файла;</li>
-        <li>многостраничная структура сайта.</li>
+        <li>большой фонд классической и современной литературы;</li>
+        <li>бронирование книг онлайн;</li>
+        <li>удобный читальный зал и абонемент;</li>
+        <li>бесплатная запись для жителей города.</li>
       </ul>
     </section>
 
     <section class="section" id="popular">
-      <h2>Популярные товары</h2>
+      <h2>Популярные книги</h2>
 
       <div class="products-grid">
         <article class="product-card">
           <span class="product-card__badge">Хит</span>
-          <h3 class="product-card__title">Товар 1</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">1000 руб.</p>
+          <h3 class="product-card__title">Война и мир</h3>
+          <p class="product-card__description">Автор: Л. Н. Толстой.</p>
+          <p class="product-card__price">Выдача на 14 дней</p>
           <a class="product-card__link" href="product.html">Подробнее</a>
-          <button class="button product-card__button" type="button" data-product="Товар 1">
-            Заказать
+          <button class="button product-card__button" type="button" data-product="Война и мир">
+            Забронировать
           </button>
         </article>
 
-        <article class="product-card product-card--discount">
-          <span class="product-card__badge">Скидка</span>
-          <h3 class="product-card__title">Товар 2</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">1500 руб.</p>
+        <article class="product-card product-card--rare">
+          <span class="product-card__badge">Редкое</span>
+          <h3 class="product-card__title">Мастер и Маргарита</h3>
+          <p class="product-card__description">Автор: М. А. Булгаков.</p>
+          <p class="product-card__price">Выдача на 14 дней</p>
           <a class="product-card__link" href="product.html">Подробнее</a>
-          <button class="button product-card__button" type="button" data-product="Товар 2">
-            Заказать
+          <button class="button product-card__button" type="button" data-product="Мастер и Маргарита">
+            Забронировать
           </button>
         </article>
 
         <article class="product-card">
-          <span class="product-card__badge">Новинка</span>
-          <h3 class="product-card__title">Товар 3</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">2000 руб.</p>
+          <span class="product-card__badge">Новое</span>
+          <h3 class="product-card__title">Мёртвые души</h3>
+          <p class="product-card__description">Автор: Н. В. Гоголь.</p>
+          <p class="product-card__price">Выдача на 14 дней</p>
           <a class="product-card__link" href="product.html">Подробнее</a>
-          <button class="button product-card__button" type="button" data-product="Товар 3">
-            Заказать
+          <button class="button product-card__button" type="button" data-product="Мёртвые души">
+            Забронировать
           </button>
         </article>
       </div>
     </section>
 
     <aside class="aside-info">
-      <h2>Информация для покупателей</h2>
+      <h2>Информация для читателей</h2>
       <p>
-        Чтобы оформить заказ, нажмите «Заказать» в карточке товара
+        Чтобы забронировать книгу, нажмите «Забронировать» в карточке
         или заполните форму на странице <a href="order.html">заявки</a>.
+        Книга ждёт вас на абонементе три дня.
       </p>
     </aside>
   </main>
 
   <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
-    <h2 id="order-dialog-title">Оформление заявки</h2>
+    <h2 id="order-dialog-title">Бронирование книги</h2>
 
     <form class="order-form" id="order-form" action="#" method="post" novalidate>
       <input id="selected-product" name="selected-product" type="hidden">
@@ -155,9 +156,9 @@
         <label for="order-topic">Тема заявки</label>
         <select id="order-topic" name="topic" required>
           <option value="">Выберите тему</option>
-          <option value="product">Заказ товара</option>
+          <option value="product">Бронирование книги</option>
           <option value="consultation">Консультация</option>
-          <option value="delivery">Доставка</option>
+          <option value="extension">Продление срока</option>
         </select>
       </div>
 
@@ -197,7 +198,7 @@
   <footer id="contacts">
     <nav class="footer-nav" aria-label="Быстрые ссылки">
       <a href="index.html#advantages">Преимущества</a>
-      <a href="index.html#popular">Популярные товары</a>
+      <a href="index.html#popular">Популярные книги</a>
       <a href="contacts.html#feedback">Обратная связь</a>
     </nav>
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
