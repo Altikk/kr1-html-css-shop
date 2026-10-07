@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#eef5ff"/>
+  <rect x="130" y="80" width="140" height="140" rx="12" fill="#0057b8"/>
+  <rect x="130" y="80" width="140" height="30" rx="12" fill="#003f86"/>
+  <text x="200" y="175" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle">Товар 1</text>
+</svg>

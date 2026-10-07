@@ -3,213 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Оформление заявки — Зерно</title>
-  <meta name="description" content="Оформите заявку в кофейной лавке «Зерно»: выберите товар, способ получения и удобное время — менеджер свяжется с вами.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Оформление заявки — Зерно">
-  <meta property="og:description" content="Оформите заявку в кофейной лавке «Зерно»: выберите товар, способ получения и удобное время — менеджер свяжется с вами.">
-  <meta property="og:url" content="https://altikk.github.io/kr1-html-css-shop/order.html">
-  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+  <meta name="description" content="Форма оформления заявки в учебном интернет-магазине.">
+  <title>Оформление заявки — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Оформление заявки — Учебный интернет-магазин">
+  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
 </head>
 <body id="top">
-  <a class="skip-link" href="#main">Перейти к содержимому</a>
-
-  <header class="site-header">
-    <div class="site-header__inner container">
-      <a class="site-header__logo" href="index.html">
-        <img class="site-header__logo-image" src="images/logo.svg" alt="" width="36" height="36">
-        Зерно
-      </a>
+  <header>
+    <div class="site-header">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка и оплата</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
-
-      <a class="button button--small" href="order.html">Оформить заявку</a>
     </div>
   </header>
 
-  <main id="main">
-    <nav class="breadcrumbs container" aria-label="Хлебные крошки">
-      <ol class="breadcrumbs__list">
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li>
-        <li class="breadcrumbs__item" aria-current="page">Оформление заявки</li>
-      </ol>
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a>
+      <span>Оформление заявки</span>
     </nav>
 
-    <section class="page-intro container" aria-labelledby="order-title">
-      <h1 id="order-title">Оформление заявки</h1>
-      <p class="page-intro__text">
-        Заполните форму — менеджер перезвонит, уточнит детали и подтвердит заказ.
-        Поля, отмеченные <span class="order-form__required">*</span>, обязательны.
-      </p>
-    </section>
+    <section class="section">
+      <h1>Оформление заявки</h1>
+      <p>Заполните форму, и мы свяжемся с вами для подтверждения заказа.</p>
 
-    <div class="order-layout container">
-      <section aria-labelledby="order-form-title">
-        <h2 class="visually-hidden" id="order-form-title">Форма заявки</h2>
-
-        <div class="notice notice--success" id="order-success" role="status" hidden>
-          <strong class="notice__title">Спасибо! Заявка принята.</strong>
-          <p class="notice__text">Мы свяжемся с вами в течение 15 минут в рабочее время. <a href="catalog.html">Вернуться в каталог</a></p>
+      <form class="order-form order-form--page" action="#" method="post">
+        <div class="form-field">
+          <label for="name">Имя</label>
+          <input id="name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" required>
         </div>
 
-        <form class="order-form order-form--card" action="#" method="post" novalidate data-validate data-success="order-success">
-          <div class="order-form__row">
-            <div class="order-form__field">
-              <label class="order-form__label" for="order-name">Имя <span class="order-form__required" aria-hidden="true">*</span></label>
-              <input class="order-form__input" id="order-name" name="name" type="text" placeholder="Иван" minlength="2" autocomplete="name" required>
-            </div>
+        <div class="form-field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="example@mail.ru" required>
+        </div>
 
-            <div class="order-form__field">
-              <label class="order-form__label" for="order-phone">Телефон <span class="order-form__required" aria-hidden="true">*</span></label>
-              <input class="order-form__input" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}" autocomplete="tel" aria-describedby="order-phone-hint" required>
-              <small class="order-form__hint" id="order-phone-hint">Формат: +7 (900) 000-00-00</small>
-            </div>
-          </div>
+        <div class="form-field">
+          <label for="phone">Телефон</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder="+7 (900) 000-00-00"
+            pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+            required
+          >
+          <small>Формат: +7 (900) 000-00-00</small>
+        </div>
 
-          <div class="order-form__field">
-            <label class="order-form__label" for="order-email">E-mail <span class="order-form__required" aria-hidden="true">*</span></label>
-            <input class="order-form__input" id="order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" aria-describedby="order-email-hint" required>
-            <small class="order-form__hint" id="order-email-hint">Пришлём подтверждение и трек-номер.</small>
-          </div>
+        <div class="form-field">
+          <label for="product">Товар</label>
+          <select id="product" name="product" required>
+            <option value="">Выберите товар</option>
+            <option value="product-1">Товар 1</option>
+            <option value="product-2">Товар 2</option>
+            <option value="product-3">Товар 3</option>
+            <option value="product-4">Товар 4</option>
+            <option value="product-5">Товар 5</option>
+            <option value="product-6">Товар 6</option>
+          </select>
+        </div>
 
-          <div class="order-form__row">
-            <div class="order-form__field">
-              <label class="order-form__label" for="order-product">Товар <span class="order-form__required" aria-hidden="true">*</span></label>
-              <select class="order-form__input" id="order-product" name="product" required>
-                <option value="">Выберите товар</option>
-                <optgroup label="Кофе в зёрнах">
-              <option value="ethiopia">Эфиопия Иргачефф — 890 ₽</option>
-              <option value="colombia">Колумбия Супремо — 790 ₽</option>
-              <option value="brazil">Бразилия Сантос — 650 ₽</option>
-              <option value="kenya">Кения АА — 990 ₽</option>
-                </optgroup>
-                <optgroup label="Оборудование">
-              <option value="dripper">Воронка V60 керамическая — 1 900 ₽</option>
-              <option value="kettle">Чайник «гусиная шея» — 4 200 ₽</option>
-              <option value="grinder">Ручная кофемолка — 3 500 ₽</option>
-              <option value="french-press">Френч-пресс — 2 300 ₽</option>
-                </optgroup>
-                <optgroup label="Аксессуары">
-              <option value="scale" disabled>Весы с таймером — 2 800 ₽ (нет в наличии)</option>
-                </optgroup>
-                <option value="consultation">Нужна консультация бариста</option>
-              </select>
-            </div>
+        <div class="form-field">
+          <label for="comment">Комментарий</label>
+          <textarea id="comment" name="comment" rows="4" placeholder="Укажите дополнительную информацию"></textarea>
+        </div>
 
-            <div class="order-form__field">
-              <label class="order-form__label" for="order-quantity">Количество</label>
-              <input class="order-form__input" id="order-quantity" name="quantity" type="number" min="1" max="20" value="1">
-            </div>
-          </div>
-
-          <fieldset class="order-form__fieldset">
-            <legend class="order-form__legend">Помол</legend>
-            <div class="order-form__options">
-              <label class="order-form__option"><input class="order-form__control" type="radio" name="grind" value="beans" checked> В зёрнах</label>
-              <label class="order-form__option"><input class="order-form__control" type="radio" name="grind" value="espresso"> Эспрессо</label>
-              <label class="order-form__option"><input class="order-form__control" type="radio" name="grind" value="filter"> Фильтр / воронка</label>
-              <label class="order-form__option"><input class="order-form__control" type="radio" name="grind" value="french"> Френч-пресс</label>
-            </div>
-          </fieldset>
-
-          <fieldset class="order-form__fieldset">
-            <legend class="order-form__legend">Способ получения <span class="order-form__required" aria-hidden="true">*</span></legend>
-            <div class="order-form__options">
-              <label class="order-form__option"><input class="order-form__control" type="radio" name="delivery" value="courier" required> Курьер по Москве</label>
-              <label class="order-form__option"><input class="order-form__control" type="radio" name="delivery" value="cdek"> СДЭК</label>
-              <label class="order-form__option"><input class="order-form__control" type="radio" name="delivery" value="pickup"> Самовывоз</label>
-            </div>
-          </fieldset>
-
-          <div class="order-form__field">
-            <label class="order-form__label" for="order-comment">Комментарий</label>
-            <textarea class="order-form__input order-form__input--textarea" id="order-comment" name="comment" rows="4" maxlength="500" placeholder="Адрес, удобное время звонка, пожелания по вкусу"></textarea>
-          </div>
-
-          <label class="order-form__agreement" for="order-agreement">
-            <input class="order-form__control" id="order-agreement" name="agreement" type="checkbox" required>
-            <span>Я согласен на обработку персональных данных <span class="order-form__required" aria-hidden="true">*</span></span>
+        <div class="form-field form-field--checkbox">
+          <label for="agreement">
+            <input id="agreement" name="agreement" type="checkbox" required>
+            Я согласен на обработку данных
           </label>
+        </div>
 
-          <div class="order-form__actions">
-            <button class="button" type="submit">Отправить заявку</button>
-            <button class="button button--ghost" type="reset">Очистить</button>
-            <p class="order-form__note">Оплата — только после подтверждения заказа.</p>
-          </div>
-        </form>
-      </section>
-
-      <aside class="order-summary" aria-labelledby="summary-title">
-        <h2 class="order-summary__title" id="summary-title">Что будет дальше</h2>
-        <ol>
-          <li>Менеджер перезвонит в течение 15 минут.</li>
-          <li>Уточним помол и адрес, назовём итоговую сумму.</li>
-          <li>Обжарим и отправим заказ в течение 48 часов.</li>
-        </ol>
-        <p>Есть вопросы? <a href="contacts.html">Свяжитесь с нами</a> или посмотрите <a href="delivery.html">условия доставки</a>.</p>
-      </aside>
-    </div>
+        <div class="form-actions">
+          <button type="submit">Отправить заявку</button>
+          <button type="reset">Очистить</button>
+        </div>
+      </form>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="site-footer__inner container">
-      <div>
-        <a class="site-footer__logo" href="index.html">Зерно</a>
-        <p class="site-footer__text">Кофейная лавка: свежая обжарка, оборудование для заваривания и честные советы.</p>
-      </div>
-
-      <nav aria-label="Разделы сайта">
-        <h2 class="site-footer__title">Магазин</h2>
-        <ul class="site-footer__list">
-          <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
-          <li><a class="site-footer__link" href="product.html">Товар недели</a></li>
-          <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
-          <li><a class="site-footer__link" href="delivery.html">Доставка и оплата</a></li>
-        </ul>
-      </nav>
-
-      <nav aria-label="Быстрые ссылки">
-        <h2 class="site-footer__title">Покупателям</h2>
-        <ul class="site-footer__list">
-          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
-          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
-          <li><a class="site-footer__link" href="index.html#reviews">Отзывы</a></li>
-          <li><a class="site-footer__link" href="index.html#faq">Частые вопросы</a></li>
-        </ul>
-      </nav>
-
-      <div>
-        <h2 class="site-footer__title">Контакты</h2>
-        <address class="site-footer__address">
-          <ul class="site-footer__list">
-            <li><a class="site-footer__link" href="tel:+79000000000">+7 (900) 000-00-00</a></li>
-            <li><a class="site-footer__link" href="mailto:hello@zerno.example">hello@zerno.example</a></li>
-            <li>Москва, ул. Обжарочная, 12</li>
-            <li><a class="site-footer__link" href="contacts.html#feedback">Написать нам</a></li>
-          </ul>
-        </address>
-      </div>
-    </div>
-
-    <div class="site-footer__bottom container">
-      <p>&copy; 2026 Кофейная лавка «Зерно». Учебный проект.</p>
-      <p>Дисциплина «Фронтенд и бэкенд разработка», КР №1</p>
-    </div>
+  <footer>
+    <nav class="footer-nav" aria-label="Быстрые ссылки">
+      <a href="index.html#advantages">Преимущества</a>
+      <a href="index.html#popular">Популярные товары</a>
+      <a href="contacts.html#feedback">Обратная связь</a>
+    </nav>
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
 
-  <a class="back-to-top" href="#top" aria-label="Наверх">↑</a>
+  <a class="back-to-top" href="#top">Наверх</a>
 </body>
 </html>
