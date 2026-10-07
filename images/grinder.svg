@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t">
+<title id="t">Ручная кофемолка</title>
+<rect width="400" height="300" fill="#eadccb"/>
+<circle cx="330" cy="60" r="70" fill="#ffffff" opacity=".35"/>
+<ellipse cx="200" cy="262" rx="120" ry="12" fill="#2a1c14" opacity=".12"/>
+
+<rect x="150" y="150" width="100" height="104" rx="10" fill="#8a5a3c" stroke="#2a1c14" stroke-width="4"/>
+<path d="M150 186 h100 M150 222 h100" stroke="#2a1c14" stroke-width="2" opacity=".4"/>
+<rect x="196" y="234" width="8" height="10" fill="#2a1c14"/>
+<path d="M160 150 L170 112 L230 112 L240 150 Z" fill="#c9ccd1" stroke="#2a1c14" stroke-width="4" stroke-linejoin="round"/>
+<rect x="196" y="78" width="8" height="36" fill="#2a1c14"/>
+<path d="M200 80 L282 64" stroke="#2a1c14" stroke-width="8" stroke-linecap="round"/>
+<circle cx="286" cy="62" r="12" fill="#a4431c" stroke="#2a1c14" stroke-width="4"/>
+</svg>

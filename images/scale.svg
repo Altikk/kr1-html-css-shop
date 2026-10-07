@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t">
+<title id="t">Весы с таймером</title>
+<rect width="400" height="300" fill="#e4e0ea"/>
+<circle cx="330" cy="60" r="70" fill="#ffffff" opacity=".35"/>
+<ellipse cx="200" cy="262" rx="120" ry="12" fill="#2a1c14" opacity=".12"/>
+
+<rect x="100" y="170" width="200" height="70" rx="14" fill="#2a1c14" stroke="#2a1c14" stroke-width="4"/>
+<rect x="110" y="150" width="180" height="24" rx="8" fill="#c9ccd1" stroke="#2a1c14" stroke-width="4"/>
+<rect x="128" y="190" width="96" height="32" rx="4" fill="#7fbf8e"/>
+<text x="176" y="214" font-family="monospace" font-size="20" text-anchor="middle" fill="#1b3d23">18.0g</text>
+<circle cx="250" cy="206" r="10" fill="#a4431c"/>
+<circle cx="278" cy="206" r="8" fill="#6b5a4e"/>
+</svg>
