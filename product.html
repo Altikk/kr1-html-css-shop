@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Карточка товара: описание, характеристики и цена.">
+  <title>Товар 1 — Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Товар 1 — Учебный интернет-магазин">
+  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+</head>
+<body id="top">
+  <header>
+    <div class="site-header">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <span>Товар 1</span>
+    </nav>
+
+    <article class="product">
+      <img class="product__image" src="images/product.svg" alt="Изображение товара 1" width="400" height="300">
+
+      <div class="product__info">
+        <h1 class="product__title">Товар 1</h1>
+        <p class="product__description">
+          Подробное описание учебного товара. Здесь можно рассказать,
+          для чего нужен товар, из чего он сделан и чем он лучше аналогов.
+        </p>
+        <p class="product__price">1000 руб.</p>
+        <a class="button" href="order.html">Оформить заявку</a>
+        <p><a href="#specs">Перейти к характеристикам</a></p>
+      </div>
+    </article>
+
+    <section class="section" id="specs">
+      <h2>Характеристики</h2>
+
+      <table class="specs-table">
+        <caption>Характеристики товара 1</caption>
+        <thead>
+          <tr>
+            <th scope="col">Параметр</th>
+            <th scope="col">Значение</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Категория</th>
+            <td>Популярные товары</td>
+          </tr>
+          <tr>
+            <th scope="row">Материал</th>
+            <td>Пластик</td>
+          </tr>
+          <tr>
+            <th scope="row">Размер</th>
+            <td>20 × 15 × 10 см</td>
+          </tr>
+          <tr>
+            <th scope="row">Вес</th>
+            <td>500 г</td>
+          </tr>
+          <tr>
+            <th scope="row">Гарантия</th>
+            <td>12 месяцев</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="aside-info">
+      <h2>Доставка</h2>
+      <p>Доставка по Москве — 1–2 дня. Подробности можно уточнить на странице <a href="contacts.html">контактов</a>.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <nav class="footer-nav" aria-label="Быстрые ссылки">
+      <a href="index.html#advantages">Преимущества</a>
+      <a href="index.html#popular">Популярные товары</a>
+      <a href="contacts.html#feedback">Обратная связь</a>
+    </nav>
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+
+  <a class="back-to-top" href="#top">Наверх</a>
+</body>
+</html>
