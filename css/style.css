@@ -125,8 +125,27 @@ button:hover,
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
   padding: var(--space-xl) var(--space-lg);
-  background-image: url('images/books.jpeg');
+  background-color: var(--color-surface-accent);
   border-radius: var(--radius-lg);
+
+  /* Две колонки: текст слева, фото справа */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.hero__content h1 {
+  margin-top: 0;
+}
+
+/* Фото небольшое (547×365), поэтому не растягиваем его на весь блок:
+   в колонке оно почти в натуральную величину и остаётся чётким */
+.hero__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
 }
 
 .section {
@@ -548,4 +567,11 @@ header {
 .back-to-top:hover {
   color: var(--color-white);
   background-color: var(--color-primary-dark);
+}
+
+/* На узком экране колонки встают друг под друга */
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
 }
