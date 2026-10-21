@@ -5,96 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Городская библиотека: каталог книг, бронирование и условия выдачи.">
   <title>Городская библиотека</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
   <meta property="og:type" content="website">
   <meta property="og:title" content="Городская библиотека">
   <meta property="og:description" content="Учебный frontend-проект сайта библиотеки.">
-</head>
-<body id="top">
-  <header>
-    <div class="site-header">
-      <a class="site-header__logo" href="index.html">Библиотека</a>
 
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Книга</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- Bootstrap 5.3: сначала библиотека, потом наш файл — так наши стили её переопределяют -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top" class="d-flex flex-column min-vh-100">
+  <header class="site-header sticky-top border-bottom">
+    <nav class="navbar navbar-expand-lg" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Библиотека</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="navbar-nav nav-pills ms-auto gap-lg-1">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+            <li class="nav-item"><a class="nav-link" href="product.html">Книга</a></li>
+            <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero__content">
-        <h1>Городская библиотека</h1>
-        <p>
-          Более 50 000 книг: классика, современная проза, научная литература.
-          Выбирайте книгу в каталоге и бронируйте онлайн — мы подготовим её к вашему приходу.
-        </p>
-        <a class="button" href="#popular">Перейти к книгам</a>
-      </div>
+  <main class="container py-4 flex-grow-1">
+    <section class="hero rounded-3 p-4 p-lg-5 mb-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold">Городская библиотека</h1>
+          <p class="lead">
+            Более 50 000 книг: классика, современная проза, научная литература.
+            Выбирайте книгу в каталоге и бронируйте онлайн — мы подготовим её к вашему приходу.
+          </p>
+          <a class="btn btn-primary btn-lg" href="#popular">Перейти к книгам</a>
+        </div>
 
-      <img class="hero__image" src="images/books.jpeg" alt="Деревянная фигурка, задумавшись, склонилась над раскрытой книгой" width="547" height="365">
+        <div class="col-lg-6">
+          <img class="img-fluid rounded-3" src="images/books.jpeg"
+               alt="Деревянная фигурка, задумавшись, склонилась над раскрытой книгой" width="547" height="365">
+        </div>
+      </div>
     </section>
 
-    <section class="section" id="advantages">
-      <h2>Преимущества библиотеки</h2>
+    <section class="mb-5" id="advantages">
+      <h2 class="mb-3">Преимущества библиотеки</h2>
 
-      <ul class="advantages-list">
-        <li>большой фонд классической и современной литературы;</li>
-        <li>бронирование книг онлайн;</li>
-        <li>удобный читальный зал и абонемент;</li>
-        <li>бесплатная запись для жителей города.</li>
+      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 list-unstyled">
+        <li class="col"><div class="advantage h-100 p-3 border rounded-3">Большой фонд классической и современной литературы</div></li>
+        <li class="col"><div class="advantage h-100 p-3 border rounded-3">Бронирование книг онлайн</div></li>
+        <li class="col"><div class="advantage h-100 p-3 border rounded-3">Удобный читальный зал и абонемент</div></li>
+        <li class="col"><div class="advantage h-100 p-3 border rounded-3">Бесплатная запись для жителей города</div></li>
       </ul>
     </section>
 
-    <section class="section" id="popular">
-      <h2>Популярные книги</h2>
+    <section class="mb-5" id="popular">
+      <h2 class="mb-3">Популярные книги</h2>
 
-      <div class="products-grid">
-        <article class="product-card">
-          <span class="product-card__badge">Хит</span>
-          <h3 class="product-card__title">Война и мир</h3>
-          <p class="product-card__description">Автор: Л. Н. Толстой.</p>
-          <p class="product-card__price">Выдача на 14 дней</p>
-          <a class="product-card__link" href="product.html">Подробнее</a>
-          <button class="button product-card__button" type="button" data-product="Война и мир">
-            Забронировать
-          </button>
-        </article>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+          <article class="card book-card h-100">
+            <span class="badge text-bg-primary position-absolute top-0 end-0 m-2">Хит</span>
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5 book-card__title">Война и мир</h3>
+              <p class="card-text text-body-secondary">Автор: Л. Н. Толстой.</p>
+              <p class="card-text fw-bold">Выдача на 14 дней</p>
+              <div class="d-flex flex-wrap gap-2 mt-auto">
+                <a class="btn btn-outline-primary btn-sm" href="product.html">Подробнее</a>
+                <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#order-modal" data-product="Война и мир">
+                  Забронировать
+                </button>
+              </div>
+            </div>
+          </article>
+          </div>
 
-        <article class="product-card product-card--rare">
-          <span class="product-card__badge">Редкое</span>
-          <h3 class="product-card__title">Мастер и Маргарита</h3>
-          <p class="product-card__description">Автор: М. А. Булгаков.</p>
-          <p class="product-card__price">Выдача на 14 дней</p>
-          <a class="product-card__link" href="product.html">Подробнее</a>
-          <button class="button product-card__button" type="button" data-product="Мастер и Маргарита">
-            Забронировать
-          </button>
-        </article>
+          <div class="col">
+          <article class="card book-card book-card--rare h-100">
+            <span class="badge text-bg-dark position-absolute top-0 end-0 m-2">Редкое</span>
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5 book-card__title">Мастер и Маргарита</h3>
+              <p class="card-text text-body-secondary">Автор: М. А. Булгаков.</p>
+              <p class="card-text fw-bold">Выдача на 14 дней</p>
+              <div class="d-flex flex-wrap gap-2 mt-auto">
+                <a class="btn btn-outline-primary btn-sm" href="product.html">Подробнее</a>
+                <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#order-modal" data-product="Мастер и Маргарита">
+                  Забронировать
+                </button>
+              </div>
+            </div>
+          </article>
+          </div>
 
-        <article class="product-card">
-          <span class="product-card__badge">Новое</span>
-          <h3 class="product-card__title">Мёртвые души</h3>
-          <p class="product-card__description">Автор: Н. В. Гоголь.</p>
-          <p class="product-card__price">Выдача на 14 дней</p>
-          <a class="product-card__link" href="product.html">Подробнее</a>
-          <button class="button product-card__button" type="button" data-product="Мёртвые души">
-            Забронировать
-          </button>
-        </article>
+          <div class="col">
+          <article class="card book-card h-100">
+            <span class="badge text-bg-success position-absolute top-0 end-0 m-2">Новое</span>
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5 book-card__title">Мёртвые души</h3>
+              <p class="card-text text-body-secondary">Автор: Н. В. Гоголь.</p>
+              <p class="card-text fw-bold">Выдача на 14 дней</p>
+              <div class="d-flex flex-wrap gap-2 mt-auto">
+                <a class="btn btn-outline-primary btn-sm" href="product.html">Подробнее</a>
+                <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#order-modal" data-product="Мёртвые души">
+                  Забронировать
+                </button>
+              </div>
+            </div>
+          </article>
+          </div>
       </div>
     </section>
 
-    <aside class="aside-info">
-      <h2>Информация для читателей</h2>
-      <p>
+    <aside class="info-block p-4 rounded-3 border-start border-4 border-primary">
+      <h2 class="h4">Информация для читателей</h2>
+      <p class="mb-0">
         Чтобы забронировать книгу, нажмите «Забронировать» в карточке
         или заполните форму на странице <a href="order.html">заявки</a>.
         Книга ждёт вас на абонементе три дня.
@@ -102,113 +136,93 @@
     </aside>
   </main>
 
-  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
-    <h2 id="order-dialog-title">Бронирование книги</h2>
+  <!-- Модальное окно Bootstrap: открывается кнопками с data-bs-toggle="modal" -->
+  <div class="modal fade" id="order-modal" tabindex="-1" aria-labelledby="order-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form class="needs-validation" id="order-form" action="#" method="post" novalidate data-success="success-message">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="order-modal-title">Бронирование книги</h2>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
 
-    <form class="order-form" id="order-form" action="#" method="post" novalidate>
-      <input id="selected-product" name="selected-product" type="hidden">
+          <div class="modal-body">
+            <p class="text-body-secondary">Книга: <strong data-product-name>не выбрана</strong></p>
+            <input id="selected-product" name="selected-product" type="hidden">
 
-      <div class="form-field">
-        <label for="order-name">Имя</label>
-        <input
-          id="order-name"
-          name="name"
-          type="text"
-          placeholder="Введите ваше имя"
-          minlength="2"
-          autocomplete="given-name"
-          required
-        >
+            <div class="mb-3">
+              <label class="form-label" for="order-name">Имя</label>
+              <input class="form-control" id="order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
+              <div class="invalid-feedback">Введите имя (не короче 2 символов).</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="order-email">E-mail</label>
+              <input class="form-control" id="order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
+              <div class="invalid-feedback">Введите корректный e-mail.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="order-phone">Телефон</label>
+              <input class="form-control" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00"
+                     pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" aria-describedby="order-phone-hint" required>
+              <div class="form-text" id="order-phone-hint">Формат: +7 (900) 000-00-00</div>
+              <div class="invalid-feedback">Введите телефон в формате +7 (900) 000-00-00.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="order-date">Дата визита</label>
+              <input class="form-control" id="order-date" name="date" type="date">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="order-topic">Тема заявки</label>
+              <select class="form-select" id="order-topic" name="topic" required>
+                <option value="">Выберите тему</option>
+                <option value="product">Бронирование книги</option>
+                <option value="consultation">Консультация</option>
+                <option value="extension">Продление срока</option>
+              </select>
+              <div class="invalid-feedback">Выберите тему заявки.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="order-comment">Комментарий</label>
+              <textarea class="form-control" id="order-comment" name="comment" rows="3" placeholder="Укажите дополнительную информацию"></textarea>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" id="order-agreement" name="agreement" type="checkbox" required>
+              <label class="form-check-label" for="order-agreement">Я согласен на обработку данных</label>
+              <div class="invalid-feedback">Нужно согласие на обработку данных.</div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary" type="button" data-bs-dismiss="modal">Закрыть</button>
+            <button class="btn btn-primary" type="submit">Отправить заявку</button>
+          </div>
+        </form>
       </div>
+    </div>
+  </div>
 
-      <div class="form-field">
-        <label for="order-email">E-mail</label>
-        <input
-          id="order-email"
-          name="email"
-          type="email"
-          placeholder="example@mail.ru"
-          autocomplete="email"
-          required
-        >
-      </div>
+  <div class="alert alert-success position-fixed bottom-0 start-50 translate-middle-x mb-3 z-3" id="success-message" role="status" hidden>
+    Заявка отправлена! Мы подготовим книгу к вашему приходу.
+  </div>
 
-      <div class="form-field">
-        <label for="order-phone">Телефон</label>
-        <input
-          id="order-phone"
-          name="phone"
-          type="tel"
-          inputmode="tel"
-          placeholder="+7 (900) 000-00-00"
-          pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
-          required
-        >
-        <small>Формат: +7 (900) 000-00-00</small>
-      </div>
-
-      <div class="form-field">
-        <label for="order-date">Дата связи</label>
-        <input
-          id="order-date"
-          name="date"
-          type="date"
-        >
-      </div>
-
-      <div class="form-field">
-        <label for="order-topic">Тема заявки</label>
-        <select id="order-topic" name="topic" required>
-          <option value="">Выберите тему</option>
-          <option value="product">Бронирование книги</option>
-          <option value="consultation">Консультация</option>
-          <option value="extension">Продление срока</option>
-        </select>
-      </div>
-
-      <div class="form-field">
-        <label for="order-comment">Комментарий</label>
-        <textarea
-          id="order-comment"
-          name="comment"
-          rows="4"
-          placeholder="Укажите дополнительную информацию"
-        ></textarea>
-      </div>
-
-      <div class="form-field form-field--checkbox">
-        <label for="order-agreement">
-          <input
-            id="order-agreement"
-            name="agreement"
-            type="checkbox"
-            required
-          >
-          Я согласен на обработку данных
-        </label>
-      </div>
-
-      <div class="form-actions">
-        <button type="button" id="close-order-dialog">Закрыть</button>
-        <button type="submit">Отправить заявку</button>
-      </div>
-    </form>
-  </dialog>
-
-  <p class="success-message" id="success-message" hidden>
-    Форма успешно отправлена!
-  </p>
-
-  <footer id="contacts">
-    <nav class="footer-nav" aria-label="Быстрые ссылки">
-      <a href="index.html#advantages">Преимущества</a>
-      <a href="index.html#popular">Популярные книги</a>
-      <a href="contacts.html#feedback">Обратная связь</a>
-    </nav>
-    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  <footer class="site-footer mt-auto py-4">
+    <div class="container">
+      <nav class="d-flex flex-wrap gap-3 mb-3" aria-label="Быстрые ссылки">
+        <a href="index.html#advantages">Преимущества</a>
+        <a href="index.html#popular">Популярные книги</a>
+        <a href="contacts.html#feedback">Обратная связь</a>
+      </nav>
+      <p class="mb-1">&copy; 2026 Учебный проект. Все права защищены.</p>
+      <p class="mb-0">Дисциплина: Фронтенд и бэкенд разработка</p>
+    </div>
   </footer>
 
-  <a class="back-to-top" href="#top">Наверх</a>
+  <a class="back-to-top btn btn-primary position-fixed bottom-0 end-0 m-3 z-3" href="#top">Наверх</a>
 </body>
 </html>

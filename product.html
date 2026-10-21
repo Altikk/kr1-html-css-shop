@@ -5,106 +5,125 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Карточка книги: описание, характеристики и условия выдачи.">
   <title>Война и мир — Городская библиотека</title>
-  <link rel="stylesheet" href="css/style.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Война и мир — Городская библиотека">
   <meta property="og:description" content="Учебный frontend-проект сайта библиотеки.">
-</head>
-<body id="top">
-  <header>
-    <div class="site-header">
-      <a class="site-header__logo" href="index.html">Библиотека</a>
 
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="product.html">Книга</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- Bootstrap 5.3: сначала библиотека, потом наш файл — так наши стили её переопределяют -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+</head>
+<body id="top" class="d-flex flex-column min-vh-100">
+  <header class="site-header sticky-top border-bottom">
+    <nav class="navbar navbar-expand-lg" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Библиотека</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="navbar-nav nav-pills ms-auto gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="product.html">Книга</a></li>
+            <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <main>
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a href="index.html">Главная</a>
-      <a href="catalog.html">Каталог</a>
-      <span>Война и мир</span>
+  <main class="container py-4 flex-grow-1">
+    <nav aria-label="Хлебные крошки">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Война и мир</li>
+      </ol>
     </nav>
 
-    <article class="product">
-      <img class="product__image" src="images/product.svg" alt="Обложка книги «Война и мир»" width="400" height="300">
+    <article class="row g-4 align-items-start mb-5">
+      <div class="col-md-6">
+        <img class="img-fluid rounded-3 border" src="images/product.svg" alt="Обложка книги «Война и мир»" width="400" height="300">
+      </div>
 
-      <div class="product__info">
-        <h1 class="product__title">Война и мир</h1>
-        <p class="product__description">
+      <div class="col-md-6">
+        <h1>Война и мир</h1>
+        <p class="lead">
           Роман-эпопея Л. Н. Толстого о жизни русского общества в эпоху
           наполеоновских войн. Одно из главных произведений мировой литературы.
         </p>
-        <p class="product__price">Выдача на 14 дней</p>
-        <a class="button" href="order.html">Забронировать</a>
-        <p><a href="#specs">Перейти к характеристикам</a></p>
+        <p class="fs-4 fw-bold">Выдача на 14 дней</p>
+        <a class="btn btn-primary btn-lg" href="order.html">Забронировать</a>
+        <p class="mt-3"><a href="#specs">Перейти к характеристикам</a></p>
       </div>
     </article>
 
-    <section class="section" id="specs">
+    <section class="mb-5" id="specs">
       <h2>Характеристики</h2>
 
-      <table class="specs-table">
-        <caption>Характеристики книги «Война и мир»</caption>
-        <thead>
-          <tr>
-            <th scope="col">Параметр</th>
-            <th scope="col">Значение</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Автор</th>
-            <td>Л. Н. Толстой</td>
-          </tr>
-          <tr>
-            <th scope="row">Жанр</th>
-            <td>Роман-эпопея, классика</td>
-          </tr>
-          <tr>
-            <th scope="row">Год издания</th>
-            <td>1869</td>
-          </tr>
-          <tr>
-            <th scope="row">Количество страниц</th>
-            <td>1300</td>
-          </tr>
-          <tr>
-            <th scope="row">Язык</th>
-            <td>Русский</td>
-          </tr>
-          <tr>
-            <th scope="row">Наличие</th>
-            <td>Есть на абонементе (3 экземпляра)</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered caption-top specs-table">
+          <caption>Характеристики книги «Война и мир»</caption>
+          <thead>
+            <tr>
+              <th scope="col">Параметр</th>
+              <th scope="col">Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <th scope="row">Автор</th>
+                <td>Л. Н. Толстой</td>
+              </tr>
+              <tr>
+                <th scope="row">Жанр</th>
+                <td>Роман-эпопея, классика</td>
+              </tr>
+              <tr>
+                <th scope="row">Год издания</th>
+                <td>1869</td>
+              </tr>
+              <tr>
+                <th scope="row">Количество страниц</th>
+                <td>1300</td>
+              </tr>
+              <tr>
+                <th scope="row">Язык</th>
+                <td>Русский</td>
+              </tr>
+              <tr>
+                <th scope="row">Наличие</th>
+                <td>Есть на абонементе (3 экземпляра)</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <aside class="aside-info">
-      <h2>Как получить книгу</h2>
-      <p>Забронированная книга ждёт вас на абонементе три дня. Часы работы — на странице <a href="contacts.html">контактов</a>.</p>
+    <aside class="info-block p-4 rounded-3 border-start border-4 border-primary">
+      <h2 class="h4">Как получить книгу</h2>
+      <p class="mb-0">Забронированная книга ждёт вас на абонементе три дня. Часы работы — на странице <a href="contacts.html">контактов</a>.</p>
     </aside>
   </main>
 
-  <footer>
-    <nav class="footer-nav" aria-label="Быстрые ссылки">
-      <a href="index.html#advantages">Преимущества</a>
-      <a href="index.html#popular">Популярные книги</a>
-      <a href="contacts.html#feedback">Обратная связь</a>
-    </nav>
-    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  <footer class="site-footer mt-auto py-4">
+    <div class="container">
+      <nav class="d-flex flex-wrap gap-3 mb-3" aria-label="Быстрые ссылки">
+        <a href="index.html#advantages">Преимущества</a>
+        <a href="index.html#popular">Популярные книги</a>
+        <a href="contacts.html#feedback">Обратная связь</a>
+      </nav>
+      <p class="mb-1">&copy; 2026 Учебный проект. Все права защищены.</p>
+      <p class="mb-0">Дисциплина: Фронтенд и бэкенд разработка</p>
+    </div>
   </footer>
 
-  <a class="back-to-top" href="#top">Наверх</a>
+  <a class="back-to-top btn btn-primary position-fixed bottom-0 end-0 m-3 z-3" href="#top">Наверх</a>
 </body>
 </html>
