@@ -13,8 +13,8 @@
 - `product.html` — карточка книги;
 - `order.html` — заявка на бронирование книги;
 - `contacts.html` — контактная информация;
-- `css/style.css` — файл стилей;
-- `js/main.js` — файл JavaScript;
+- `css/style.css` — палитра и стили поверх Bootstrap;
+- `js/main.js` — название книги в модальном окне и проверка форм;
 - `images/` — папка для изображений;
 - `README.md` — описание проекта;
 - `.gitignore` — список файлов, исключённых из Git.
@@ -23,6 +23,7 @@
 
 - HTML;
 - CSS;
+- Bootstrap 5.3 (подключён с CDN jsDelivr);
 - Git;
 - GitHub.
 
@@ -113,29 +114,32 @@ GitHub Pages: https://altikk.github.io/kr1-html-css-shop/
 - `order.html` — форма бронирования: имя, e-mail, телефон, книга, комментарий, согласие;
 - `contacts.html` — адрес, телефон, часы работы и ссылка на форму заявки.
 
-## Выполнение требований КР №1
+## Вёрстка на Bootstrap
+
+Сайт свёрстан на Bootstrap 5.3. Библиотека подключается в `<head>` каждой страницы с CDN, после неё подключается `css/style.css`, поэтому наши стили переопределяют стандартные.
 
 - Семантика: `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`.
-- Навигация: единое меню на всех страницах, активный пункт `site-nav__link--active`, хлебные крошки.
+- Навигация: компонент `navbar` с активным пунктом `nav-link active`; на узком экране меню сворачивается в кнопку («бургер»). Хлебные крошки — компонент `breadcrumb`.
 - Якорные ссылки: `index.html#advantages`, `index.html#popular`, `contacts.html#feedback`, `product.html#specs`.
-- Таблица: `product.html` (характеристики книги), содержит `caption`, `thead`, `tbody`, `th`, `td`.
-- Форма: на `order.html` и в модальном окне; у полей есть `label`, `name`, `required`, `type="email"`.
-- Модальное окно: `<dialog>` на главной странице.
-- CSS: переменные в `:root`, состояния `:hover` и `:focus-visible`.
-- Flexbox: меню, шапка, карточки, кнопки формы, подвал.
-- Grid: сетка карточек, раскладка каталога, страница книги.
-- БЭМ: `site-header__logo`, `site-nav__link`, `product-card__title`, `product-card__price`, `product-card--rare` и др.
+- Сетка: `container`, `row`, `col-*` и `row-cols-*` — карточки перестраиваются в 1, 2 или 3 колонки в зависимости от ширины экрана.
+- Flexbox: утилиты `d-flex`, `flex-column`, `gap-*`, `mt-auto` (кнопки карточки прижаты к низу), прижатый футер (`d-flex flex-column min-vh-100` у `body`).
+- Карточки: компонент `card`, бейджи `badge`.
+- Таблица: `table table-striped table-hover table-bordered`, содержит `caption`, `thead`, `tbody`, `th`, `td`.
+- Формы: `form-control`, `form-select`, `form-check`; проверка через класс `was-validated` и подсказки `invalid-feedback`.
+- Модальное окно: компонент `modal`, открывается и закрывается атрибутами `data-bs-toggle` и `data-bs-dismiss`.
+- CSS-переменные: наша коричневая палитра в `:root` подменяет переменные Bootstrap (`--bs-primary`, `--bs-btn-bg` и др.).
+- Состояния: `:hover` и `:focus-within` у карточек, `:focus-visible` у ссылок и кнопок.
 - Позиционирование:
-  - `position: sticky` — шапка и фильтры каталога;
-  - `position: relative` — карточка книги;
-  - `position: absolute` — бейджи «Хит», «Скидка», «Новинка»;
-  - `position: fixed` — кнопка «Наверх»;
-  - `z-index` — шапка и кнопка «Наверх».
+  - `sticky-top` — шапка, `sticky-lg-top` — фильтры каталога;
+  - `.card` (`position: relative`) и бейдж `position-absolute top-0 end-0`;
+  - `position-fixed` — кнопка «Наверх» и сообщение об отправке;
+  - `z-3` — кнопка «Наверх».
 
 ## Самостоятельные доработки
 
-- бейджи «Хит», «Редкое», «Новое» на карточках и модификатор `product-card--rare` для редкого издания;
+- бейджи «Хит», «Редкое», «Новое» на карточках и модификатор `book-card--rare` для редкого издания;
 - хлебные крошки на внутренних страницах;
+- адаптивная вёрстка на сетке Bootstrap: сайт без горизонтальной прокрутки на телефоне;
 - фильтры каталога прилипают при прокрутке;
 - кнопка «Наверх»;
 - выделение текущего пункта меню;
